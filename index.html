@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Single Registration Page</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;1,300&family=Poppins:wght@300&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: "Poppins", sans-serif;
+            margin: 0;
+            background-color: hsl(0, 100%, 74%);
+        }
+        main {
+            margin: 0;
+            max-width: 1440px;
+            height: 100vh;
+            background-image: url("Registration-form/images/bg-intro-desktop.png");
+            padding: 40px;
+            
+        }
+        main .content {
+            display: flex;
+            justify-content: space-around;
+            color: white;
+            margin: 60px auto;
+            
+        }
+        main div .left-side {
+            margin: auto auto;
+            max-width: 450px;
+
+        }
+        main .right-side .trial {
+            background: hsl(248, 32%, 49%);
+            border: 1px solid hsl(248, 32%, 49%);
+            border-radius: 5px;
+            box-shadow: 0px 5px 3px hsla(249, 10%, 26%, 0.288);
+            color: white;
+            width: 400px;
+            height: 40px;
+        }
+        main .right-side form {
+            width: 400px;
+            background: white;
+            border-radius: 5px;
+            text-align: center;
+        }
+        main .right-side form input {
+            width: 80%;
+            line-height: 2;
+            border: 1px solid hsl(246, 25%, 77%);
+            border-radius: 3px;
+        }
+        main .right-side form input:focus {
+            border: 1px solid hsl(248, 32%, 49%);
+            outline: 0;
+        }
+
+        main .content .right-side #claim {
+            width: 80%;
+            background: hsl(154, 59%, 51%);
+            border: 1px solid hsl(154, 59%, 51%);
+            color: white;
+            padding: 6px 0px;
+            border-radius: 5px;
+            padding: 10px 0px;
+            box-shadow: 0px 3px 3px hsl(154, 59%, 51%);
+        }
+        main .right-side form span {
+            color: hsl(246, 25%, 77%);
+            font-size: 11px;
+        }
+        main .right-side form #spa a {
+            text-decoration: none;
+            color: hsl(0, 100%, 74%);
+        }
+        @media screen and (max-width: 768px) {
+            main {
+                background-image: url("Registration-form/images/bg-intro-mobile.png");
+                padding: 0px;
+                text-align: center;
+            }
+            main .content {
+                display: block;
+                padding: 0px;
+                margin: auto auto;
+            }
+            main .content .left-side h1,p {
+                text-align: center;
+            }
+            main .right-side .trial {
+                width: 93%;
+                max-width: 320px;
+            }
+            main .right-side form {
+                text-align: center;
+                margin: auto auto;
+                padding: 5px;
+                width: 90%;
+                max-width: 320px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <main>
+        <div class="content">
+            <section class="left-side">
+                <h1>Learn to code by watching others</h1>
+                <p>See how experienced developers solve problems in real-time. Watching scripted tutorials is great,  but understanding how developers think is invaluable</p>
+            </section>
+            
+            <section class="right-side">
+                <div><button class="trial"><b>Try it free 7days</b> then $20/mo. thereafter</button></div>
+                <br>
+                <form id="form">
+                    <br>
+                    <div>
+                        <input type="text" placeholder="First Name" name="fname" id="fname" required>
+                    </div>
+                    <br>
+                    <div>
+                        <input type="text" placeholder="Last Name" name="lname" id="lname" required>
+                    </div>
+                    <br>
+                    <div>
+                        <input type="email" placeholder="Email Address" name="email" required>
+                    </div>
+                    <br>
+                    <div>
+                        <input type="password" placeholder="Password" name="password" required>
+                    </div>
+                    <br>
+                    <button id="claim">CLAIM YOUR FREE TRIAL</button>
+                    <br>
+                    <span id="spa">By clicking the button, you are agreeing to our <a href="#">Terms and Services</a></span>
+
+                        
+                </form>
+            </section>
+        </div>
+    </main>
+</body>
+</html>
+
+<script>
+    window.ub.form.validationMessages.form.required= "You forgot your First name"
+</script>
